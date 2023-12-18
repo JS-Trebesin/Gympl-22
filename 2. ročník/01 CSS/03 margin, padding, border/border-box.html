@@ -1,0 +1,27 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-box</title>
+    <style>
+        .jedna {
+            border: 2px solid black;
+            width: 300px;
+            height: 400px;
+        }
+        .dva {
+            border: 2px solid red;
+            height: 50px;
+            width: 300px;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="jedna">
+        <div class="dva">Hokus pokus</div>
+    </div>
+</body>
+</html>

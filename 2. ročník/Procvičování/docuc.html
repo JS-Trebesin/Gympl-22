@@ -1,0 +1,47 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .obarvi {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div>Prezenčka:</div>
+    <ol id="seznam">
+     
+    </ol>
+
+    <li></li>
+    <script>
+        function generujJmena() {
+    var pocetLidi = prompt("Kolik je tady šutrů?");
+    var jmenaDiv = document.createElement("div");
+    
+    if (!isNaN(pocetLidi)) {
+        pocetLidi = parseInt(pocetLidi);
+        var jmena = "Prezenčka: ";
+        //google helpnul
+        
+        for (var i = 0; i < pocetLidi; i++) {
+            jmena += "kámen ";
+        }
+
+        jmenaDiv.innerHTML = "<p>" + jmena + "</p>";
+        document.body.appendChild(jmenaDiv);
+    } else {
+        alert("error");
+    }
+}
+
+generujJmena();  
+       
+
+    </script>
+</body>
+</html>

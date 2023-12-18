@@ -1,0 +1,35 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    <style>
+        .ctverec {
+            width: 150px;
+            aspect-ratio: 1/1;
+            border: 2px solid black;
+        }
+        .zelena {
+            background-color: rgb(77, 134, 77);
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .ruzova {
+            background-color: pink;
+            /* margin top right bottom left */
+            margin: 30px 50px 50px 30px;
+        }
+        .oranzova {
+            background-color: orange;
+            /* 50px pro top a bottom, 100px pro left right */
+            margin: 50px 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ctverec zelena">Zelená</div>
+    <div class="ctverec ruzova">Růžová</div>
+    <div class="ctverec oranzova">Oranžová</div>
+</body>
+</html>

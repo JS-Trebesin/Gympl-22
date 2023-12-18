@@ -1,0 +1,33 @@
+.nadpis {
+    color: blue;
+    font-size: 50px;
+    font-family: Georgia;
+}
+
+
+.obrazek {
+    height: 200px;
+    display: block;
+}
+
+h2 {
+    display: inline;
+}
+
+p {
+    display: inline;
+}
+
+.zelena {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ctverec {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 15px;
+}

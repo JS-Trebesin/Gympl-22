@@ -1,0 +1,25 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://api.mapy.cz/loader.js"></script>
+	<script>Loader.load()</script>
+</head>
+<body>
+    <ul>
+        <li>jedna</li>
+        <li>dva</li>
+        <li>tři</li>
+    </ul>
+    <a href="http://www.google.com"><img src="https://www.charteradvisory.cz/files/falcon-7x-big-resolution.jpg"></a>
+    <div id="mapa" style="width:600px; height:400px;"></div>
+		<script type="text/javascript">
+			var stred = SMap.Coords.fromWGS84(14.49189, 50.08448);
+			var mapa = new SMap(JAK.gel("mapa"), stred, 17);
+			mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+			mapa.addDefaultControls();
+		</script>
+    
+</body>
+</html>
