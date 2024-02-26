@@ -1,0 +1,34 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="nadpis">Dobrý den</h1>
+    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum et numquam cupiditate adipisci magnam natus aut libero enim, omnis saepe aspernatur voluptas velit repellat dolor! Tenetur perspiciatis veritatis iusto culpa omnis, aliquid soluta, architecto mollitia odit voluptatem sapiente nisi porro vel expedita. Ab blanditiis dolor voluptatum similique aliquam error id?</p>
+
+
+    <script>
+        let nadpisJS = document.querySelector("#nadpis")
+        
+        
+        let odstavec = document.querySelector(".paragraph")
+
+        let odpoved = window.prompt("Chceš modrý nebo zelený nadpis?")
+
+
+        if (odpoved === "modrý") {
+            nadpisJS.style.color = "blue"
+        } else if (odpoved === "zelený") {
+            nadpisJS.style.color = "green"
+        } else {
+            nadpisJS.style.color = "red"
+            odstavec.innerText = "Zvolil jsi špatnou barvu"
+        }
+
+
+
+    </script>
+</body>
+</html>

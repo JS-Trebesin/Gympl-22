@@ -127,7 +127,11 @@ function zvolenKamen() {
     // Zde upravujeme logiku, pokud je zvolen kámen ↓
 
 
-
+    if (volbaPocitace === "nůžky") {
+        vysledek = "Vyhrál hráč"
+    } else if (volbaPocitace === "kámen") {
+        vysledek = "???"
+    }
 
 
 
