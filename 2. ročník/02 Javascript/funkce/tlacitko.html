@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="tlacitko">Mňam</button>
+
+    <script>
+        let tlacitko = document.querySelector(".tlacitko")
+        let sirka = 100
+        let vyska = 75
+
+        tlacitko.addEventListener("click", zvetsiTlacitko)
+
+
+        function zvetsiTlacitko() {
+            sirka = sirka + 20
+            vyska = vyska + 20
+            tlacitko.style.width = sirka + "px"
+            tlacitko.style.height = vyska + "px"
+        }
+
+
+        tlacitko.addEventListener("dblclick", zmensiTlacitko)
+
+
+        function zmensiTlacitko() {
+            sirka = sirka - 80
+            vyska = vyska - 80
+            tlacitko.style.width = sirka + "px"
+            tlacitko.style.height = vyska + "px"
+        }
+
+        // Alternativa - anonymní funkce
+        
+        // tlacitko.addEventListener("click", function() {
+        //     sirka = sirka + 20
+        //     vyska = vyska + 20
+        //     tlacitko.style.width = sirka + "px"
+        //     tlacitko.style.height = vyska + "px"
+        // })
+
+
+        // tlacitko.addEventListener("dblclick", function() {
+        //     sirka = sirka - 80
+        //     vyska = vyska - 80
+        //     tlacitko.style.width = sirka + "px"
+        //     tlacitko.style.height = vyska + "px"
+        // })
+
+
+    </script>
+</body>
+</html>
