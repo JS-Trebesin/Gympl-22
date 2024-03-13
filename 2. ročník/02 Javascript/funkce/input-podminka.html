@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            p {
+                border: 1px solid black;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <input class="input" type="text" />
+        <button class="tlacitko">Zadej input</button>
+        <p class="output"></p>
+
+        <script>
+            let input = document.querySelector(".input")
+            let tlacitko = document.querySelector(".tlacitko")
+            let output = document.querySelector(".output")
+
+            tlacitko.addEventListener("click", function () {
+                zpracujInput()
+            })
+
+            input.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    zpracujInput()
+                }
+            })
+
+            function zpracujInput() {
+                // parseInt => udělej z textu číslo
+                let cislo = parseInt(input.value)
+                if (cislo === 0) {
+                    output.innerText = "Číslo je 0"
+                } else if (cislo > 0) {
+                    output.innerText = "Číslo je kladné"
+                } else {
+                    output.innerText = "Číslo je záporné"
+                }
+            }
+        </script>
+    </body>
+</html>
