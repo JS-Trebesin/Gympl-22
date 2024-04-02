@@ -15,6 +15,3 @@ if (oblibenyClovek === "Hvezdoň") {
 } else {
     console.log("Bůůů")
 }
-
-
-

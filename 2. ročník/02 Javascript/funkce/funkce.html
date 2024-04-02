@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1 id="nadpis">Původní nadpis</h1>
-    <p id="odstavec">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, commodi.</p>
-    <h2 id="nadpis-dva">Nadpis 2</h2>
-    <button id="tlacitko">Klik</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="nadpis">Původní nadpis</h1>
+        <p id="odstavec">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+            commodi.
+        </p>
+        <h2 id="nadpis-dva">Nadpis 2</h2>
+        <button id="tlacitko">Klik</button>
 
+        <script>
+            let nadpis = document.querySelector("#nadpis")
+            let odstavec = document.querySelector("#odstavec")
+            let nadpisDva = document.querySelector("#nadpis-dva")
+            let tlacitko = document.querySelector("#tlacitko")
 
-    <script>
-        let nadpis = document.querySelector("#nadpis")
-        let odstavec = document.querySelector("#odstavec")
-        let nadpisDva = document.querySelector("#nadpis-dva")
-        let tlacitko = document.querySelector("#tlacitko")
+            tlacitko.addEventListener("click", upravNadpis)
 
-        function upravNadpis() {
-            nadpis.style.color = "white"
-            nadpis.style.backgroundColor = "green"
-            nadpis.style.fontSize = "50px"
-        }
+            function upravNadpis() {
+                nadpis.style.color = "white"
+                nadpis.style.backgroundColor = "green"
+                nadpis.style.fontSize = "50px"
+            }
 
-        
-        function upravText(prvek) {
-            prvek.style.color = "white"
-            prvek.style.backgroundColor = "green"
-            prvek.style.fontSize = "50px"
-        }
+            function upravText(prvek) {
+                prvek.style.color = "white"
+                prvek.style.backgroundColor = "green"
+                prvek.style.fontSize = "50px"
+            }
 
-        // upravText(nadpis)
-        // upravText(odstavec)
-        // upravText(nadpisDva)
-       
-        tlacitko.addEventListener("click", upravNadpis)
+            // upravText(nadpis)
+            // upravText(odstavec)
+            // upravText(nadpisDva)
 
-
-
-
-
-    </script>
-</body>
+            tlacitko.addEventListener("click", upravNadpis)
+        </script>
+    </body>
 </html>
