@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input class="input" type="text" />
+        <button class="tlacitko">Klik</button>
+        <p class="output"></p>
+
+        <script>
+            // const je proměnná, kterou nelze přepsat
+            const tlacitko = document.querySelector(".tlacitko")
+            const input = document.querySelector(".input")
+            const output = document.querySelector(".output")
+
+            tlacitko.addEventListener("click", function () {
+                let pocetBodu = parseInt(input.value)
+
+                // pokud je počet bodů větší než 89 a zároveň je menší než 101, něco udělej
+                if (pocetBodu > 89 && pocetBodu < 101) {
+                    output.innerText = "Jednička"
+                } else if (pocetBodu > 79) {
+                    output.innerText = "Dvojka"
+                } else if (pocetBodu > 59) {
+                    output.innerText = "Trojka"
+                } else if (pocetBodu > 49) {
+                    output.innerText = "Čtyřka"
+                } else {
+                    output.innerText = "pětka"
+                }
+            })
+        </script>
+    </body>
+</html>
