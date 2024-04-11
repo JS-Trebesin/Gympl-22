@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="input" />
+        <button id="tlacitko">Klik</button>
+
+        <script>
+            const input = document.querySelector("#input")
+            const tlacitko = document.querySelector("#tlacitko")
+
+            tlacitko.addEventListener("click", opakuj)
+
+            function opakuj() {
+                let cisloZInputu = parseInt(input.value)
+                while (0 < cisloZInputu) {
+                    console.log("náhodné slovo")
+                    cisloZInputu--
+                }
+            }
+
+            let i = 6
+
+            while (i < 667) {
+                console.log(i)
+                i++
+            }
+
+            let j = 10
+
+            while (j > 0) {
+                console.log(j)
+                // j = j - 1
+                // j -= 1
+                j--
+            }
+        </script>
+    </body>
+</html>
