@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let seznam = ["Jarmil", "Andělína", "Hvězdoň", "Horymíra"]
+        console.log(seznam[2])
+        console.log(seznam)
+
+        seznam[0] = "Vojta"
+
+        seznam.push("Hugo")
+
+        let vyhozenaOsoba = seznam.pop()
+        console.log("vyhozená osoba je: ", vyhozenaOsoba)
+
+        seznam.splice(1, 1)
+
+        for (let i = 0; i < seznam.length; i++) {
+            console.log(seznam[i])
+        }
+
+
+    </script>
+</body>
+</html>
