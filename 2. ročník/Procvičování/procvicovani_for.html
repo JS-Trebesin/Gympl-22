@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input class="input" type="text" />
+        <button id="tlacitko">Klik</button>
+        <p id="output"></p>
+
+        <script>
+            // for (let i = 1; i < 16; i++) {
+            //     if (i !== 13) {
+            //         console.log(i)
+            //     }
+            // }
+
+            const input = document.querySelector(".input")
+            const tlacitko = document.querySelector("#tlacitko")
+            const output = document.querySelector("#output")
+
+            tlacitko.addEventListener("click", vypis)
+
+            function vypis() {
+                let hodnota = parseInt(input.value)
+                for (let i = 1; i < hodnota + 1; i++) {
+                    if (i !== 13) {
+                        console.log(i)
+
+                        output.innerText += i + ","
+                        //  output.innerText = output.innerText + i
+
+                        // i++
+                        // i = i + 1
+                        // i += 1
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Vytvoření arraye
+            let seznam = ["Jarmil", "Andělína", "Hvězdoň", "Horymíra"]
 
-    <script>
-        let seznam = ["Jarmil", "Andělína", "Hvězdoň", "Horymíra"]
-        console.log(seznam[2])
-        console.log(seznam)
+            // Vypíše hodnotu na indexu 2 (což je třetí položka, protože počítač počítá od 0)
+            console.log(seznam[2])
 
-        seznam[0] = "Vojta"
+            // Vypíše seznam jako jeden objekt
+            console.log(seznam)
 
-        seznam.push("Hugo")
+            // Nahradí hodnotu na indexu 0 novou hodnout Vojta
+            seznam[0] = "Vojta"
 
-        let vyhozenaOsoba = seznam.pop()
-        console.log("vyhozená osoba je: ", vyhozenaOsoba)
+            // Přidá do arraye hodnotu Hugo
+            seznam.push("Hugo")
 
-        seznam.splice(1, 1)
+            // Vytvoří proměnnou vyhozenaOsoba, pod kterou uloží poslední hodnotu a odebere ji z arrraye
+            let vyhozenaOsoba = seznam.pop()
+            console.log("vyhozená osoba je: ", vyhozenaOsoba)
 
-        for (let i = 0; i < seznam.length; i++) {
-            console.log(seznam[i])
-        }
+            // Odebere z arraye hodnotu z indexu 1... druhá 1 určuje počet odebraných položek/hodnotem
+            seznam.splice(1, 1)
 
-
-    </script>
-</body>
+            // Pro každou hodnotu z arraye, vypiš hodnotu - aneb vypíše jednotlivé položky arraye
+            for (let i = 0; i < seznam.length; i++) {
+                console.log(seznam[i])
+            }
+        </script>
+    </body>
 </html>

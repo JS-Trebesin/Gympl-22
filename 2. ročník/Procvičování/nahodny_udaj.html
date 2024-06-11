@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let veci = ["myš", "propiska", "klávesnice", "pravítko"]
+
+            function vyberNahodne() {
+                let nahodneCislo = Math.floor(Math.random() * veci.length)
+                console.log(veci[nahodneCislo])
+            }
+
+            // vyberNahodne()
+
+            function hledejZaporne(cisla) {
+                for (let i = 0; i < cisla.length; i++) {
+                    if (cisla[i] < 0) {
+                        console.log(cisla[i])
+                    }
+                }
+            }
+
+            // hledejZaporne([1, -2, 3, -4])
+            // hledejZaporne([10, 9, 8, 7])
+
+            function hledejZaporne2(cisla) {
+                let zapornaCisla = []
+                for (let i = 0; i < cisla.length; i++) {
+                    if (cisla[i] < 0) {
+                        zapornaCisla.push(cisla[i])
+                    }
+                }
+                console.log(zapornaCisla)
+            }
+
+            hledejZaporne2([1, -2, 3, -4])
+            hledejZaporne2([10, 9, 8, 7])
+
+            // Pro každou hodnotu z arraye, vypiš hodnotu - aneb vypíše jednotlivé položky arraye
+
+            // for (let i = 0; i < seznam.length; i++) {
+            //     console.log(seznam[i])
+            // }
+
+            function prumer(cisla) {
+                let suma = 0
+                for (let i = 0; i < cisla.length; i++) {
+                    suma += cisla[i]
+                }
+
+                let prumer = suma / cisla.length
+                console.log(prumer)
+            }
+
+            prumer([2, 4, 6])
+        </script>
+    </body>
+</html>
