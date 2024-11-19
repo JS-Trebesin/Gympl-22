@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
+            :root {
+                --speed: 30s;
+            }
             img {
                 height: 75px;
             }
@@ -60,11 +63,11 @@
             div:has(#start:hover) ~ div > svg {
                 transform: translateX(-1400px);
             }
-
+            
             .track:nth-child(2) {
                 & > svg {
                     fill: crimson;
-                    transition: transform 30s linear;
+                    transition: transform var(--speed) linear;
                 }
 
                 & h2 {
@@ -75,7 +78,7 @@
             .track:nth-child(3) {
                 & > svg {
                     fill: royalblue;
-                    transition: transform 30s ease;
+                    transition: transform var(--speed) ease;
                 }
 
                 & h2 {
@@ -86,7 +89,7 @@
             .track:nth-child(4) {
                 & > svg {
                     fill: seagreen;
-                    transition: transform 30s ease-in;
+                    transition: transform var(--speed) ease-in;
                 }
 
                 & h2 {
@@ -97,7 +100,7 @@
             .track:nth-child(5) {
                 & > svg {
                     fill: pink;
-                    transition: transform 30s ease-out;
+                    transition: transform var(--speed) ease-out;
                 }
 
                 & h2 {
@@ -108,7 +111,7 @@
             .track:nth-child(6) {
                 & > svg {
                     fill: purple;
-                    transition: transform 30s ease-in-out;
+                    transition: transform var(--speed) ease-in-out;
                 }
 
                 & h2 {
@@ -119,7 +122,7 @@
             .track:nth-child(7) {
                 & > svg {
                     fill: gold;
-                    transition: transform 30s
+                    transition: transform var(--speed)
                         cubic-bezier(0.98, -0.14, 0.55, 2.09);
                 }
 
