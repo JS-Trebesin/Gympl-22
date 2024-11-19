@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kolecko {
+            height: 100px;
+            aspect-ratio: 1/1;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: blueviolet;
+            /* animation: název_animacie doba_trvání prodleva_před_spuštěním počet_opakování směr_animace stav_na_konci 
+            ---> ne všechny tyto vlastnosti musí být vyplněny, pouze název a doba trvání jsou povinné */
+            animation: ukazka 3s forwards
+        }
+
+
+
+        @keyframes ukazka {
+            50% {
+                background-color: green;
+                border-radius: 0%;
+            }
+
+            99% {
+                opacity: 100;
+            }
+
+            100% {
+                background-color: red;
+                translate: 300px 0;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kolecko"></div>
+</body>
+</html>
