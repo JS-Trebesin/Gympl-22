@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
 * {
     margin: 0;
 }
@@ -6,6 +9,7 @@
     position: relative;
     min-height: 100vh;
     z-index: -5;
+    overflow: hidden;
 }
 
 
@@ -19,31 +23,38 @@
 
 .clouds_1 {
     z-index: 2;
-    --rychlost: 5000px;
+    --rychlost: 10;
 }
 
 .clouds_2 {
     z-index: 5;
-    --rychlost: -5000px;
+    --rychlost: -10;
 }
 
 .rocks {
     z-index: 3;
+    --rychlost: 30;
 }
 
 .ground {
     z-index: 4;
+    --rychlost: 1;
 }
 
 .sky {
     z-index: 1;
+    --rychlost: 1;
 }
 
 .clouds_1, .clouds_2 {
     animation: mraky linear;
-    animation-timeline: scroll();
+    animation-timeline: scroll(root);
 }
 
+.rocks, .ground, .sky, .heading {
+    animation: ostatni linear;
+    animation-timeline: scroll(root);
+}
 
 section {
     padding-block: 250px;
@@ -57,18 +68,43 @@ section p {
     margin-inline: auto;
     color: white;
     font-size: 1.75em;
+    font-family: "Dancing Script";
 
 }
 
+.heading {
+    z-index: 100;
+    font-size: 6rem;
+    font-family: "Dancing script";
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    translate: -50% 0;
+    --rychlost: 32;
+}
+
+.firefly {
+    height: 20px;
+    aspect-ratio: 1/1;
+    z-index: 99;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff3a1;
+    filter: blur(2px);
+    translate: -50% -50%;
+    transition: 0.5s ease-out;
+}
 
 @keyframes mraky {
     100% {
-        transform: translateX(var(--rychlost));
+        /* calc() kalkulačka var(--nazev-promenne) krát 100px */
+        transform: translateX(calc(var(--rychlost) * 100px));
     }
 }
 
 @keyframes ostatni {
     100% {
-        transform: translateY(var(--rychlost));
+        transform: translateY(calc(var(--rychlost) * 30px));
     }
 }

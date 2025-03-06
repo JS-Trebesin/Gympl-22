@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="firefly"></div>
+
     <div class="parallax">
         <img class="clouds_1" src="layers/clouds_1.png" alt="">
         <img class="clouds_2" src="layers/clouds_2.png" alt="">
         <img class="ground" src="layers/ground.png" alt="">
         <img class="rocks" src="layers/rocks.png" alt="">
         <img class="sky" src="layers/sky.png" alt="">
+        <h1 class="heading">Hello</h1>
     </div>
+
 
     <section>
         <p>
@@ -87,5 +91,34 @@
         </p>
     </section>
 
+
+    <script>
+        const firefly = document.querySelector(".firefly")
+
+        let mouseX = 0
+        let mouseY = 0
+
+        document.addEventListener("mousemove", function(event) {
+            mouseX = event.clientX
+            mouseY = event.clientY
+
+            litejSvetlusko()
+        })
+
+
+        window.addEventListener("scroll", function() {
+            litejSvetlusko()
+        })
+
+
+        function litejSvetlusko() {
+            let scrollX = window.pageXOffset
+            let scrollY = window.pageYOffset
+
+            
+            firefly.style.left = mouseX + scrollX + "px"
+            firefly.style.top = mouseY + scrollY + "px"
+        }
+    </script>
 </body>
 </html>
