@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 150px;
+        }
+
+        .nadpis {
+            color: white;
+            font-family: monospace;
+            text-align: end;
+        }
+
+        .nadpis::after {
+            content: "";
+            width: 50px;
+            aspect-ratio: 1/1;
+            background-color: aqua;
+            position: absolute;
+            left: 50%;
+            translate: -50% 0;
+            z-index: -1;
+            filter: blur(25px);
+            animation: rozmazani-animace 5s linear infinite alternate;
+        }
+
+        @keyframes rozmazani-animace {
+            100% {
+                filter: blur(50px);
+            }
+        }
+    
+        .karta {
+            height: 300px;
+            aspect-ratio: 3/4;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-sizing: border-box;
+            font-family: monospace;
+            text-align: center;
+            box-shadow: 0 0 100px aqua;
+            animation: stin 1s linear infinite alternate;
+        }
+
+        @keyframes stin {
+            100% {
+                box-shadow: 0 0 70px aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="nadpis">Delší náhodná věta, <br> 
+        s více slovy</h1>
+    <div class="karta">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque.
+    </div>
+</body>
+</html>
