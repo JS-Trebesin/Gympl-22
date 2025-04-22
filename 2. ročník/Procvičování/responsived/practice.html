@@ -15,13 +15,15 @@
         <header id="domu">
             <nav class="navigace">
                 <img src="images/logo.webp" class="logo" alt="" />
-                <ul>
+                <ul id="mobil-menu">
                     <li><a href="#domu">Domů</a></li>
                     <li><a href="#nabidka">Nabídka</a></li>
                     <li><a href="#recenze">Recenze</a></li>
                     <li><a href="#kontakty">Kontakty</a></li>
                 </ul>
-                <img src="images/hamburger.png" class="hamburger-icon" alt="">
+                <button popovertarget="mobil-menu" class="ham-btn">
+                    <img src="images/hamburger.png" class="hamburger-icon" alt="">
+                </button>
             </nav>
 
             <div class="nadpisy">
@@ -101,12 +103,21 @@
         </section>
 
         <script>
-            let hamburger = document.querySelector(".hamburger")
+            const menu = document.querySelector("#mobil-menu")
 
-            hamburger.addEventListener("click", () => {
-                let hamMenu = document.querySelector(".linky")
-                hamMenu.classList.toggle("aktivni")
-            })
+            window.addEventListener("load", handlePopover)
+            window.addEventListener("resize", handlePopover)
+
+
+            function handlePopover() {
+                if (window.innerWidth < 640) {
+                    menu.setAttribute("popover", "")
+                } else {
+                    menu.removeAttribute("popover")
+                }
+            }
+
+            
         </script>
     </body>
 </html>

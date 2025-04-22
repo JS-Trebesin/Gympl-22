@@ -38,6 +38,13 @@ nav {
     display: none;
 }
 
+.ham-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 .logo {
     margin-right: auto;
 }
@@ -372,9 +379,48 @@ section#kontakty {
         scale: 0.7;
     }
 
-    nav ul {
-        flex-direction: column;
+    nav {
+
+        ul {
+            flex-direction: column;
+            display: none;
+            gap: 5px;
+            position: fixed;
+            inset: unset;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            border: 1px solid transparent;
+            background: white;
+            padding: 2em 2em;
+            z-index: 1;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transform: translateX(100%);
+            transition: display 1s, transform 1s;
+            transition-behavior: allow-discrete;
+
+            &:popover-open {
+                right: 0;
+                display: flex;
+                transform: translateX(0);
+
+                @starting-style {
+                    transform: translateX(100%);
+                }
+            }
+            
+
+            li {
+                a {
+                   font-size: 1rem; 
+                   color: black;
+                   font-weight: normal;
+                }
+            }
+        }
     }
+    
 
     .karta-recenze {
         scale: 0.7;
